@@ -1,6 +1,6 @@
 var request = require('request');
 var cheerio = require('cheerio');
-var save = require('./db');
+var save = require('./crawler');
 
 var url = 'https://www.comparegames.com.br/melhores-jogos-de-pc-em-2018'
 var jogos = [];

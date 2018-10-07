@@ -28,7 +28,7 @@ module.exports = function(itens){
     files = ['jogos.txt'];
     async.each(files, function(file, callback){
         fs.writeFile(file, jogos, function(err, contents){
-            console.log('Jogos salvos no arquivo'+file);
+            console.log('Jogos salvos no arquivo '+file);
             callback(null);
         })
     });
