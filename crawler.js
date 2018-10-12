@@ -24,20 +24,13 @@ module.exports = function(itens){
         jogos.push(jogo);
     });
 
-    //salva no arquivo de modo assincrono. O processamento do codigo ira continuar depois que a operacao de I/O terminar.
     files = ['jogos.txt'];
     async.each(files, function(file, callback){
         fs.writeFile(file, jogos, function(err, contents){
-            console.log('Jogos salvos no arquivo '+file);
+            console.log('Jogos salvos no arquivo 65'+file);
             callback(null);
         })
     });
-
-    // salvar em arquivo.
-    // fs.writeFile('jogos.txt', jogos, function(err){
-    //     if(err) throw err;
-    //     console.log('Jogos salvos com sucesso.');
-    // });
 
     //salvar no banco de dados (mongodb).
     mongoose.connect(host, function(error){
